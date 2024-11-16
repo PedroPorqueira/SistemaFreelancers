@@ -1,4 +1,4 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('loginForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const email = document.getElementById('email').value;
@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (user && user.password === password) {
         alert(`Bem-vindo de volta, ${user.name}!`);
-        window.location.href = "../main/main.html";
+        window.location.href = "quotes.html";
     } else {
         alert("E-mail ou senha incorretos.");
     }

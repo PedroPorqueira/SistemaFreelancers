@@ -1,4 +1,4 @@
-document.getElementById('signupForm').addEventListener('submit', function(event) {
+document.getElementById('signupForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const name = document.getElementById('name').value;
@@ -8,9 +8,6 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const user = { name, email, password };
 
     localStorage.setItem(email, JSON.stringify(user));
-    
-
     alert(`Cadastro realizado! Bem-vindo, ${name}.`);
-
-    window.location.href = "../login/login.html";
+    window.location.href = "login.html";
 });
